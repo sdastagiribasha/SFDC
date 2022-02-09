@@ -13,3 +13,6 @@ for(arr of arrayone)
 {
 	console.log(arr); //--> 4th type
 }
+
+
+arrayone.map(item => console.log(item)); //-->5th Type using Map concept
