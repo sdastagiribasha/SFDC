@@ -6,4 +6,10 @@ for(i=1;i<=10;i++)
 	console.log(i);//-->2nd type
 }
 
-arrayone.forEach(arrele => console.log(arrele)); //-->3rdtype
+arrayone.forEach(arrele => console.log(arrele)); //-->3rd type
+
+var arr;
+for(arr of arrayone)
+{
+	console.log(arr); //--> 4th type
+}
