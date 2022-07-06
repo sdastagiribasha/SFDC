@@ -1,0 +1,48 @@
+<template>
+<!--
+                Data Binding In LWC (OR) How to read/fetch Data in LWC:
+            ***********************************************************
+        There are 3 ways to read the input
+        1)by using naming property :
+        2)by using lightning:button
+                for read single input- this.template.queryselector('lightning-input');
+                for read multiple inputs - var inpEle =this.template.queryselectorAll('lightning-input');
+        3)queryselector withoutall we can read etire records
+        -> by creating classname in Html 
+        ex: class="fname";
+        this.template.queryselector('lightning-input').value;
+-->
+
+<!-- 1)by using naming property :-->
+<div class="slds-box maindiv bgcolor">
+    <h1 class="text_color" style="text-align: center;">by using naming property </h1>
+    <lightning-input type="text" label="FirstName" name="FirstName" onchange={handlechange}></lightning-input>
+    <lightning-input type="text" label="LastName" name="LastName" onchange={handleChangelastname}></lightning-input>
+</div>
+<div class="slds-box bgcolor">
+   <span class="text_color">{fname}: {lname}</span> 
+</div><br/><br/>
+
+<!--2)by using querySelector with foreach loop-->
+<div class="slds-box maindiv bgcolor">
+    <h1 class="text_color" style="text-align: center;">by using querySelector with foreach loop</h1>
+    <lightning-input type="text" label="Username" name="UserName"></lightning-input>
+    <lightning-input type="text" label="Password" name="Password" ></lightning-input>
+    <lightning-button label="Save" onclick={handleclick}></lightning-button>
+</div>
+<div class="slds-box bgcolor">
+    <span class="text_color">{uname}: {pword}</span> 
+ </div><br/><br/>
+
+ <!--3)queryselector withoutall we can read entire records by creating with class-->
+    <div class="slds-box maindiv bgcolor">
+        <h1 class="text_color" style="text-align: center;">by using queryselector withoutall we can read entire records by creating with class</h1>
+        <lightning-input type="text" label="email" class="email"></lightning-input>
+        <lightning-input type="text" label="secreatkey" class="secreatkey"></lightning-input>
+        <lightning-input type="text" label="Passwordenter" class="Passwordenter"></lightning-input>
+        <lightning-button label="Submit" onclick={handlebuttonclick}></lightning-button>
+    </div>
+    <div class="slds-box bgcolor">
+        <span class="text_color">{useremail}: {userkey} : {userPassword}</span> 
+     </div>
+</template>

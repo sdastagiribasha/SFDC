@@ -1,0 +1,45 @@
+<template>
+    <!--
+                Data Binding In LWC (OR) How to read/fetch Data in LWC:
+            ***********************************************************
+        There are 3 ways to read the input
+        1)by using naming property :
+        2)by using lightning:button
+                for read single input- this.template.queryselector('lightning-input');
+                for read multiple inputs - var inpEle =this.template.queryselectorAll('lightning-input');
+        3)queryselector withoutall we can read etire records
+        -> by creating classname in Html 
+        ex: class="fname";
+        this.template.queryselector('lightning-input').value;
+-->
+
+    <!--Sample Data Displaying-->
+    <lightning-card title="Basic Example To display the Data">
+        hello {Greeting}
+    </lightning-card>
+    <br/><br/>
+
+    <!--With Value Using-->
+    <lightning-card title="Display the Data By using value">
+        <lightning-input label="FirstName" type="text" value={Message} onchange={handleChange} ></lightning-input>
+    </lightning-card>
+    <br/><br/>
+
+    <!-- 1)by using naming property :-->
+    <lightning-card title="Display the Data By using Naming property">
+        <lightning-input label="Enter Text" type="text" name="firstName" onchange={handleFirstName}></lightning-input>
+        {name}
+    </lightning-card>
+    <br/><br/>
+
+    <!--2)by using querySelector with foreach loop-->
+    <lightning-card title="Display the Data By using QuerySelector">
+        <lightning-input label="FirstName" type="text" onclick={handleQuerySelector}></lightning-input>
+    </lightning-card>
+    <br/><br/>
+
+    <!--3)queryselector withoutall we can read entire records by creating with class-->
+    <lightning-card title="Display the Data By using Class">
+        <lightning-input label="FirstName" type="text" class=" " onclick={handleClass}></lightning-input>
+    </lightning-card>
+</template>

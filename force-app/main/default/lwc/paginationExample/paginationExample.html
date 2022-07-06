@@ -1,0 +1,21 @@
+<!--Display contact Records with Search functionality using Table format along with Pagination in LWC.-->
+<!--############################# Pagination Example with Lightning DataTable and Search Functionality ###############################-->
+<template>
+    <lightning-input label="search" type="search" onchange={handleKeySearch} value={contactSearch}></lightning-input>
+    <lightning-card>
+        <template if:true={data}>
+            <lightning-datatable key-field="id"
+                                data={data}
+                                columns={columns}
+                                show-row-number-column
+                                hide-checkbox-column
+            >
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+</lightning-card>
+<lightning-button label="previous" variant="brand" onclick={handlePrevious} icon-name="utility:chevronleft"></lightning-button>
+<lightning-button label="Next" variant="Success" onclick={handleNext} icon-name="utility:chevronright" icon-position="right"></lightning-button>
+</template>

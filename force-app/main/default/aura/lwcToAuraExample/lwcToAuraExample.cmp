@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+        <lightning:card>
+            <strong>
+                I am Parent Component In Lightning Aura
+            </strong>
+        </lightning:card><br/>
+        <div>
+            <lightning:button label="Call Lightning Web Component" 
+                              variant="brand" 
+                              onclick="{!c.callChilLWCdMethod}"/>
+        </div>
+        
+        <c:LwcToAuraExample aura:id = "mylwccmp"></c:LwcToAuraExample> 
+</aura:component>	

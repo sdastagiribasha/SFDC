@@ -1,0 +1,16 @@
+<template>
+    <h1 style="font-weight:bold ;">Example of  Basic Data Table</h1>
+   <lightning-card>
+            <template if:true={accList}>
+                <lightning-datatable 
+                                    key-field="Id"
+                                    data={accList} 
+                                    columns={columns}
+                >
+                </lightning-datatable>
+            </template>
+            <template if:true={error}>
+                {error}
+            </template>
+   </lightning-card>
+</template>

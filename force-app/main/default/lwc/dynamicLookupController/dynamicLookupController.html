@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Dynamic Lookup functionality" icon-name="Account">
+        <lightning-input label="Enter something" name="SearchBar" type="search" onchange={handlekeychange}></lightning-input>
+
+        <template if:true={accounts.data}>
+            <template for:each={accounts.data} for:item="account">
+                <p key={Account.id}>{Account.Name}</p>
+            </template>
+        </template>
+        <template if:true={accounts.error}>
+
+        </template>
+
+    </lightning-card>
+</template>

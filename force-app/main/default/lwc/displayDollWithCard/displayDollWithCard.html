@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Dolls Records" icon-name="utility:animal_and_nature">
+        
+            <div class="slds-card__body_inner">
+               <lightning-layout multiple-rows="true">
+                <template if:true={dollData}>
+                    <template for:each={dollData} for:item="d">
+                        <lightning-layout-item key={d.id} size="3" class="slds-var-p-around_x-small">
+                            <lightning-card title={d.Name} class="dollDesign">
+                                <div class="slds-var-p-horizontal_small dollDesign-body">
+                                    <div class="slds-media">
+                                        <div class="slds-media__figure">
+                                            <img  src = {austroToy} alt="doll profile" class="dollCustomIcon"/>
+                                        </div>
+                                        <div class="slds-media__body">
+                                            <p class="slds-var-m-bottom_xx-small">{d.Age__c} years old</p> 
+                                            <p class="slds-var-m-bottom_xx-small">{d.sex__c}</p>
+                                            <p class="slds-var-m-bottom_xx-small">{d.Height__c}</p>
+                                            <p class="slds-var-m-bottom_xx-small">{d.Weight__c}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </lightning-card>
+                        </lightning-layout-item>
+                        
+                    </template>
+                </template>
+                <template if:true={error}>
+                        {error}
+                </template>
+               </lightning-layout>
+            </div>
+
+    </lightning-card>
+</template>

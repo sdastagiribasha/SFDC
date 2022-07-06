@@ -1,0 +1,151 @@
+<template>
+    <div style="background-color:aqua">
+    <lightning-card class="slds-p-arround_small" title="Agent Registration">
+    <lightning-tabset active-tab-value={activeTab}>
+        <lightning-tab label="PersonDetails" value="1" onactive={handleActiveTab}>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">  
+                <lightning-input type="text" label="FirstName" placeholder="Enter FirstName"></lightning-input>
+            </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+               
+                <lightning-input type="text" label="LastName" placeholder="Enter LastName" required></lightning-input>
+            </lightning-layout-item>  
+
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-input type="email" label="Email" placeholder="ex: myname@example.com" required></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+               
+                <lightning-input type="phone" label="Phone" placeholder="(000)000-0000"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+               
+                <lightning-input type="date" label="DOB"></lightning-input>
+                </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-radio-group label ="Gender" 
+                                       options={options}
+                                       value={value}
+                                       type="radio">
+                </lightning-radio-group>
+            </lightning-layout-item>
+        </lightning-layout>    
+    </lightning-tab>
+
+
+    <lightning-tab label="Agency Details" value="2" onactive={handleActiveTab}>
+    <lightning-layout multiple-rows>
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+    <lightning-input type="checkbox" label="Medical Fitness"></lightning-input>
+    <lightning-input type="checkbox" label="Sports Certificate"></lightning-input>
+    </lightning-layout-item>
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+    <lightning-input type="toggle" label="Married" name="input1"></lightning-input>
+    </lightning-layout-item>
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+    <lightning-input-address
+                        address-label="Address"
+                        street-label="Street"
+                        city-label="City"
+                        country-label="Country"
+                        province-label="Province"
+                        postal-code-label="PostalCode"
+                        required
+                        field-level-help="Help Text for inputAddress field" ></lightning-input-address>
+    </lightning-layout-item>  
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+        <lightning-input type="text" label="Region"></lightning-input>
+    </lightning-layout-item>    
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+        <lightning-combobox label="Employment Type" value={value1} placeholder="Please Select" options={options1} onchange={handlechange}>
+        </lightning-combobox>
+    </lightning-layout-item>
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+        <lightning-file-upload label="PDF/JPG/CSV"></lightning-file-upload>
+    </lightning-layout-item>
+    </lightning-layout>
+    </lightning-tab>
+
+
+    <lightning-tab label="Contact Person Details" value="3" onactive={handleActiveTab}>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">  
+                <lightning-input type="text" label="FirstName" placeholder="Enter FirstName"></lightning-input>
+            </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+               
+                <lightning-input type="text" label="LastName" placeholder="Enter LastName" required></lightning-input>
+            </lightning-layout-item>  
+
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-input type="email" label="Email" placeholder="ex: myname@example.com" required></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+               
+                <lightning-input type="phone" label="Phone" placeholder="(000)000-0000"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+               
+                <lightning-input type="date" label="DOB"></lightning-input>
+                </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-radio-group label ="Gender" 
+                                       options={options}
+                                       value={value}
+                                       type="radio">
+                </lightning-radio-group>
+            </lightning-layout-item>
+
+        </lightning-layout>
+    </lightning-tab>
+
+
+    <lightning-tab label="Work Order Scope" value="4" onactive={handleActiveTab}>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-input type="checkbox" label="Medical Fitness"></lightning-input>
+                <lightning-input type="checkbox" label="Sports Certificate"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-input type="toggle" label="Married" name="input1"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-input-address
+                                    address-label="Address"
+                                    street-label="Street"
+                                    city-label="City"
+                                    country-label="Country"
+                                    province-label="Province"
+                                    postal-code-label="PostalCode"
+                                    required
+                                    field-level-help="Help Text for inputAddress field" ></lightning-input-address>
+                </lightning-layout-item>  
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                    <lightning-input type="text" label="Region"></lightning-input>
+                </lightning-layout-item>    
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                    <lightning-combobox label="Employment Type" value={value1} placeholder="Please Select" options={options1} onchange={handlechange}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                    <lightning-file-upload label="PDF/JPG/CSV"></lightning-file-upload>
+                </lightning-layout-item>
+        </lightning-layout>
+        </lightning-tab>
+        </lightning-tabset>
+    
+        <div class="slds-clearfix">
+            <div class="slds-float_right">
+                <lightning-button variant="brand" label="Back" disabled={disableBackbutton} class="slds-m-right_x-small" onclick={handleBackbutton}></lightning-button>
+                <lightning-button icon-name="utility:forward" icon-position="right" label="Continue" variant="Success" disabled={disableContinue} onclick={handleContinuebutton}>
+                    
+                </lightning-button>
+
+            </div>
+        </div>
+
+    </lightning-card>
+</div>
+        
+</template>

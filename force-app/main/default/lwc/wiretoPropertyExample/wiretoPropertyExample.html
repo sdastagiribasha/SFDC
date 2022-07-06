@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-box">
+        <p style="font-weight: bolder;">Wire to Property Example</p>
+        <template if:true={accounts.data}>
+            <template for:each={accounts.data} for:item="acc"> 
+                <p key={acc.id}>
+                   Account of ID: {acc.Id} &nbsp;&nbsp;&nbsp;&nbsp;
+                   Account of Name: {acc.Name} &nbsp;&nbsp;&nbsp;&nbsp;
+                   Account of Industry: {acc.Industry}
+                </p>
+            </template>
+        </template>
+    </div>
+</template>

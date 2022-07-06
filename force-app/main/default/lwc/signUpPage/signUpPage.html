@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Registration Page" icon-name="custom:custom84">
+        <div class="signUp">
+        <h2 align ="center" style="font-size:30px;"> SignUp </h2>
+
+        <div class="slds-p-around_medium">
+            <lightning-input type="text" label="First Name" placeholder="Enter FirstName" align="center" value={empObj.FirstName} onchange={empFirstNameChange}></lightning-input>
+            <lightning-input type="text" label="Last Name" placeholder="Enter LastName" align="center" value={empObj.LastName} onchange={empLastNameChange}></lightning-input>
+            <lightning-input label="Email" type="email" placeholder="Enter Email" align="center" value={empObj.Email} onchange={empEmailChange}></lightning-input>
+            <lightning-input label="Phone" type="Phone" placeholder="Enter Phone" align="center" value={empObj.Phone} onchange={empPhoneChange}></lightning-input>
+            <lightning-input label="UserName" type="text" placeholder="Enter UserName" align="center" value={empObj.UserName} onchange={empUserNameChange}></lightning-input>
+            <lightning-input label="Password" type="password" placeholder="Enter Password" align="center" value={empObj.Password} onchange={empPasswordChange}></lightning-input>
+        </div>
+
+        <div class="slds-text-align--center slds-m-top--medium" style="text-align:center; width:40px; margin:auto;">
+             <lightning-button label="Submit" variant="brand" onclick={submitAction}></lightning-button>
+             <!-- <lightning-button label="Already have an account?" onclick={backtoLoginpage}></lightning-button> -->
+             <a href="https://shaik-developer-edition.ap8.force.com/customercommunity/s/loginpage">Login</a>
+        </div>
+        </div>
+    </lightning-card>
+</template>

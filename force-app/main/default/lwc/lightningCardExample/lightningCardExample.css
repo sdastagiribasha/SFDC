@@ -1,0 +1,11 @@
+
+.bear-tile {
+    border: 1px solid #d2955d;
+    border-radius: .25rem;
+    display: block;
+}
+.customIcon {
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+}

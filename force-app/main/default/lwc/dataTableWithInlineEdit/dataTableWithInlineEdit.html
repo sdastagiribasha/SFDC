@@ -1,0 +1,19 @@
+<template>
+    <h1 style="font-weight:bold ;">Example of Data Table with Inline Edit123</h1>
+    <lightning-card>
+        <div style="height: 800px;">
+            <lightning-datatable
+             key-field="Id"
+             show-row-number-column = false
+             data={Datatable}
+             hide-checkbox-column = false
+             draft-values={draftValues}
+             onsave={handleSave}
+             columns={columns}>
+     </lightning-datatable>
+ </div>
+ <template if:true={error}>
+     {error}
+ </template>
+    </lightning-card>
+</template>

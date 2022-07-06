@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Example of Disconnected Callback">
+        <h1>This is Parent component</h1>
+        <lightning-button label="change" variant="brand" onclick={handleclick}></lightning-button>
+        <template if:true={showchildcmp}>
+            <c-show-child-cmp></c-show-child-cmp>
+        </template>
+    </lightning-card>
+</template>

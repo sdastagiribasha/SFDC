@@ -1,0 +1,18 @@
+<template>
+    <h1 style="font-weight:bold;">Example of Data table with Row Numbers</h1>
+    <lightning-card>
+        <template if:true={wiredAccounts.data}>
+            <lightning-datatable
+                            key-field="id"
+                            data={wiredAccounts.data}
+                            show-row-number-column="true"
+                            hide-checkbox-column="true"
+                            columns={columns}
+            >
+            </lightning-datatable>
+        </template>
+        <template if:true={wiredAccounts.error}>
+            {wiredAccounts.error}
+        </template>
+    </lightning-card>
+</template>

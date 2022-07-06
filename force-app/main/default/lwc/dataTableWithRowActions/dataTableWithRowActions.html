@@ -1,0 +1,17 @@
+<template>
+   <h1 style="font-weight:bold ;">Example of Data Table with Row Actions</h1>
+    <lightning-card>
+        <template if:true={accountList}>
+        <lightning-datatable
+                            key-field="id"
+                            data={accountList}
+                            columns={columns}
+                            onrowaction={handleRowAction}
+        >
+        </lightning-datatable>
+    </template>
+    <template if:true={error}>
+        {error}
+    </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card>
+        <lightning-input label="Search" type="search" onchange={handleKeySearch} value={contactSearch}></lightning-input>
+            <template for:each={contactList} for:item="con">
+                <p key={con.Id}>
+                    {con.Id},
+                    {con.LastName},
+                    {con.FirstName},
+                    {con.Phone},
+                    {con.Email}</p>
+            </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+
+</template>

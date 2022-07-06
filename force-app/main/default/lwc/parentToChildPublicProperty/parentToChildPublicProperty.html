@@ -1,0 +1,16 @@
+<template>
+    <!--With onchange functionality-->
+     <div class="slds-box" style="background-color: black;">
+        <h1 style="color: white;">Parent to Child Data Passing using Public Property using onchange</h1>
+        <lightning-input type="text" label="FirstName" onchange={handlechange}></lightning-input>
+    </div>
+    <c-parent-to-child-public-property-childcomp messagedisplay={fname}></c-parent-to-child-public-property-childcomp>
+
+    <div class="slds-box" style="background-color: aqua;">
+        <h1 style="color: rgb(244, 10, 174);">Paret to Child Data Passing using Public Property using button</h1>
+        <lightning-input type="text" label="Username" class="Uname"></lightning-input>
+        <lightning-button label="submit" onclick={handleClick}></lightning-button>
+        
+    </div>
+    <c-parent-to-child-public-property-childcomp info-display={message}></c-parent-to-child-public-property-childcomp>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-input label="Search For Account" type="search" value={AccountSearch} onchange={handleKeyChange}></lightning-input>
+    <lightning-button label="Search" onclick={handleButtonImperative}></lightning-button>
+    <lightning-card>
+        <template if:true={accounts}>
+                <lightning-datatable key-field="Id"
+                                data={accounts}
+                                columns={COLUMNS}
+                                show-row-number-column
+                                hide-checkbox-column
+                 ></lightning-datatable>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+
+</template>

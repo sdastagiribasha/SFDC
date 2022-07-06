@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Child To Parent With handling Employee Data">
+        <lightning-layout multiple-rows>               
+                <template if:true={data}>
+                    <template for:each={data} for:item="e">
+                        <lightning-layout-item key={e.id}>
+                            <lightning-card>
+                                {e.Name},
+                                {e.LastName__c}
+                            </lightning-card>
+                        </lightning-layout-item>
+                    </template>
+                    <template if:true={error}>
+                        {error}
+                    </template>
+                </template>
+    
+    </lightning-layout>
+    </lightning-card>
+</template>

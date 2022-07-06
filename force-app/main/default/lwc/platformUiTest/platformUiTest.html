@@ -1,0 +1,28 @@
+<template>
+  <div class="slds-box">
+         <lightning-vertical-navigation-overflow aria-label="Product">
+             <lightning-layout multiple-rows>
+                 <lightning-layout-item class="slds-p-around_small">
+                     <lightning-input type="text" label="skills" value="Stark industries" read-only></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-p-around_small">
+                    <template if:true={industryPicklist.data}>
+                        <lightning-combobox name="Industry" label="Industry" value={value}
+                         options ={industryPicklist.data.values} onchange={handleChange}></lightning-combobox>
+                    </template>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-p-around_small">
+                    <lightning-input type="time" name="input4" label="Required Time field" required
+                    value="18:30:00.000Z"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-p-around_small">
+                    <lightning-input type="number" name="input1" label="Enter a number" ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-p-around_small">
+                     <lightning-input type="checkbox" label="Aspire"></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-vertical-navigation-overflow> 
+    </div>
+
+</template>

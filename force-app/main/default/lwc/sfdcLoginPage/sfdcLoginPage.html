@@ -1,0 +1,40 @@
+<template> 
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 slds-large-size-8-of-12">
+          <span>
+            <img src={SalesforceLogourl}/>
+            <lightning-input type="email" label="UserName" required></lightning-input>
+            <lightning-input type="password" label="Password" required></lightning-input><br/><br/>
+            <lightning-button variant="brand" label="Log In"></lightning-button><br/><br/>
+            Dont have Account?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lightning-button variant="brand-outline" label={actionButtonLabel} onclick={clicksignup}></lightning-button>
+            <!--With conditional Rendering --> 
+            <template if:true={areDetailsVisible}>
+              <c-employe-personal-details></c-employe-personal-details>
+            </template>
+            <template if:false={areDetailsVisible}>
+                  
+            </template>
+          
+          </span>
+        </div>
+
+        <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 slds-large-size-8-of-12">
+          <div style="background-image: url(https://lh6.googleusercontent.com/KsFv4NdfqZNw9nr0M4FHitBdqbqKRMaj-vMefHoVqmZsk-izHuS58ndVz7MFWWkOvlXtvKLN7jYh_0E72jvqta5PYoMv2LmocXvWHKx-2l1U7oplZvP7MFNReOTBy7nqMPnI_0YZ);">
+          <span>
+            <h1 style="font-size: x-large;">TrailblazerDX</h1>
+            <h6>
+              SAN FRANCISCO | APRIL 27-28, 2022
+
+              Get inspired by data and determination at TrailblazerDX.
+              Join Paralympian Mike Schultz and Olympian Maame Biney as they share how data fueled their path to the podium.
+
+            </h6><br/><br/>
+            <lightning-button label="Register Now" variant="brand-outline"></lightning-button>
+            <lightning-button label="Find Out More" variant="brand"></lightning-button>
+          </span>
+          </div>
+        </div>
+
+     </div>
+    
+</template>

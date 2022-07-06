@@ -1,0 +1,19 @@
+<template>
+     Parent to child with public property
+    <div class="slds-box" style="background-color:rgb(31, 18, 18);">
+        <h1 style="color: white;">Parent to Child Data Passing using Public Property with onchange</h1>
+        <lightning-input type="text" label="Search" onchange={handleChange}></lightning-input>
+        <c-parent-to-child-component display-message={firstName} style="color:aliceblue;"></c-parent-to-child-component>
+    </div>
+
+    <div class="slds-box" style="background-color:rgb(241, 196, 16);">
+        <h1 style="color: white;">Parent to Child Data Passing using Public Property with Onclick Button</h1>
+        <lightning-input type="text" label="FirstName" class="uname"></lightning-input>        
+       
+        <lightning-button label="Save" onclick={handleClick}></lightning-button>
+            <c-parent-to-child-component information-display={userData} style="color:black;"></c-parent-to-child-component>
+       
+    </div>
+
+
+</template>

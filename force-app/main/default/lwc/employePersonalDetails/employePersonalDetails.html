@@ -1,0 +1,74 @@
+<template>
+    <h1 align="center" style="font-size:30px;">Employee Details</h1>
+    <div class="slds-box" style="background-color:black;">
+        <lightning-layout multiple-rows> 
+            
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-combobox label="Salutation" value={value9} placeholder="None" options={options9} onchange={handlechangesalutation}>
+                </lightning-combobox>
+            </lightning-layout-item>
+        
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">  
+                <lightning-input type="text" label="FirstName" placeholder="Enter FirstName"></lightning-input>
+            </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+               
+                <lightning-input type="text" label="LastName" placeholder="Enter LastName" required></lightning-input>
+            </lightning-layout-item>  
+
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-input type="email" label="Email" placeholder="ex: myname@example.com" required></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+               
+                <lightning-input type="phone" label="Phone" placeholder="(000)000-0000"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+               
+                <lightning-input type="date" label="DOB"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-radio-group label ="Gender" 
+                                       options={options}
+                                       value={value}
+                                       type="radio">
+                </lightning-radio-group>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-input type="checkbox" label="Medical Fitness"></lightning-input>
+                <lightning-input type="checkbox" label="Sports Certificate"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-input type="toggle" label="Married" name="input1"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                <lightning-input-address
+                                    address-label="Address"
+                                    street-label="Street"
+                                    city-label="City"
+                                    country-label="Country"
+                                    province-label="Province"
+                                    postal-code-label="PostalCode"
+                                    required
+                                    field-level-help="Help Text for inputAddress field" ></lightning-input-address>
+                </lightning-layout-item>  
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                    <lightning-input type="text" label="Region"></lightning-input>
+                </lightning-layout-item>    
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                    <lightning-combobox label="Employment Type" value={value1} placeholder="Please Select" options={options1} onchange={handlechange}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" class="slds-p-around_small">
+                    <lightning-file-upload label="PDF/JPG/CSV"></lightning-file-upload>
+                </lightning-layout-item>
+                
+        </lightning-layout>
+        <!--
+        <lightning-layout class="slds-text-align_center">
+        <lightning-button label="Submit"></lightning-button>
+        <lightning-button label="Cancel" align="center"></lightning-button>
+        </lightning-layout>
+    -->
+        </div>
+</template>

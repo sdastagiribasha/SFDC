@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+        <lightning-input label="Search For Account" type="text" onchange={handleKeyChange} value={accountSearch}></lightning-input>
+        <template if:true={data}>
+            <lightning-datatable key-field="id"
+                                 data={data}
+                                 columns={columns}
+                                 show-row-number-column
+                                 hide-checkbox-column
+            ></lightning-datatable>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+
+    <lightning-button label="previous" variant="Brand" onclick={handlePrevious} icon-name="utility:chevronleft"></lightning-button>
+    <lightning-button label="Next" variant="Success" onclick={handleNext} icon-position="right" icon-name="utility:chevronright"></lightning-button>
+</template>

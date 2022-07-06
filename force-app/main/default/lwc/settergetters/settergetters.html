@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-box">
+        <lightning-input type="text" label="FirstName" name="fname1"></lightning-input>
+        <lightning-input type="text" label="LastName" name="lname1"></lightning-input>
+    </div>
+    <div>
+        <lightning-button label="Click" onclick={handleclickwithgetter}></lightning-button><br/>
+       <span>
+           Users FirstName is : {userinformation}<br/>
+        Users LastName is  : {userinformation}
+       </span> 
+    </div>
+    <!--
+    <lightning-card title="Example of Setter & Getter">
+    <p>{name}</p>
+    <p>{setname}</p>
+    <lightning-button variant="brand" label="click" onclick={handleclick}></lightning-button>
+    </lightning-card>
+-->
+</template>

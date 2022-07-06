@@ -1,0 +1,87 @@
+<template>
+    <lightning-card title="Lightning Input Example" icon-name="custom:custom6">
+    <lightning-input type="text" label="Enter some text" placeholder="enter any Text"></lightning-input>
+    <lightning-input type="Date" label="Enter a date"></lightning-input>
+    <lightning-input type="Datetime" label="Enter DateTime value"></lightning-input>
+    <lightning-input type="time" label="Enter Time"></lightning-input>
+    <lightning-input type="color" name="input-color" label="Favorite color"></lightning-input>
+    <lightning-input type="file" label="Attachment"></lightning-input>
+    <lightning-input type="email" label="Email address"></lightning-input>
+    <lightning-input type="password" label="Enter your password" name="input1"  ></lightning-input>
+    <lightning-input type="tel" label="Basic phone field" name="phone2" placeholder="areacode-phone"></lightning-input>
+    <lightning-input type="url" label="Enter a URL" name="input1"></lightning-input>
+    <lightning-input type="url" label="URL field with a predefined value" name="input2" value="http://www.google.com" ></lightning-input>
+    <lightning-input type="number" name="input1" label="Enter a number" ></lightning-input>
+    <lightning-input type="checkbox" label="Basic option" name="input1"></lightning-input>
+    <lightning-input type="checkbox-button" label="Input One" name="input1"></lightning-input>
+    <lightning-input type="toggle" label="Basic option" name="input1"></lightning-input>
+    <lightning-input
+            name="enter-search"
+            label="Search when user hits the 'enter' key"
+            type="search"
+        ></lightning-input>
+    </lightning-card>
+
+    <lightning-card title="Lightning-Button Example">
+        <!-- Base variant: Makes a button look like a link -->
+        <lightning-button variant="base" label="Base" title="Looks like a link" onclick={handleClick} ></lightning-button><br/>
+
+        <!-- Neutral variant (default) -->
+        <lightning-button label="Neutral" title="Non-primary action" onclick={handleClick} ></lightning-button><br/>
+
+        <!-- Brand variant: Identifies the primary action in a group of buttons -->
+        <lightning-button variant="brand" label="Brand" title="Primary action" onclick={handleClick} ></lightning-button><br/>
+
+        <!-- Brand outline variant: Identifies the primary action in a group of buttons, but has a lighter look -->
+        <lightning-button variant="brand-outline" label="Brand Outline" title="Primary action with lighter look" onclick={handleClick} ></lightning-button><br/>
+
+        <!-- Destructive variant: Identifies a potentially negative action -->
+        <lightning-button variant="destructive" label="Destructive" title="Destructive action" onclick={handleClick} ></lightning-button><br/>
+
+        <!-- Destructive text variant: Identifies a potentially negative action, but has a lighter look -->
+        <lightning-button variant="destructive-text" label="Destructive Text" title="Destructive action with a lighter look" onclick={handleClick} ></lightning-button><br/>
+
+        <!-- Success variant: Identifies a successful action -->
+        <lightning-button variant="success" label="Success" title="Successful action" onclick={handleClick} ></lightning-button><br/>
+        <div>
+            The lable of the button clicked is : {clickbutton}
+        </div>
+    </lightning-card>
+
+    <lightning-card title="lightning-Icon Example">
+        <p>Doctype Icons are:</p>
+        <lightning-icon icon-name="doctype:audio" alternative-text="Audiofile" title="Audio"></lightning-icon>
+        <lightning-icon icon-name="doctype:image" alternative-text="image file" title="Image"></lightning-icon>
+        <p>Action Icons are:</p>
+        <lightning-icon icon-name="action:approval" alternative-text="Approved" title="Approved"></lightning-icon>
+        <lightning-icon icon-name="action:delete" alternative-text="Delete" title="Delete"></lightning-icon>
+        <lightning-icon icon-name="action:new_note" alternative-text="New note" title="New note"></lightning-icon>
+        <lightning-icon icon-name="action:preview" alternative-text="Preview" title="Preview"></lightning-icon>
+        <lightning-icon icon-name="action:edit" alternative-text="Edit" title="Edit"></lightning-icon>
+        <h1>Standard Icons are:</h1>
+        <lightning-icon icon-name="standard:contact" alternative-text="contact" title="contact"></lightning-icon>
+        <lightning-icon icon-name="standard:account" alternative-text="Account" title="Account"></lightning-icon>
+        <h1>Utility Icons are:</h1>
+        <lightning-icon icon-name="utility:connected_apps" alternative-text="Connected" title="Connected">
+        </lightning-icon>
+        <lightning-icon icon-name="utility:warning" title="Warning"></lightning-icon>
+        <lightning-icon icon-name="utility:error" alternative-text="Error!" title="Error"></lightning-icon>
+        <lightning-icon icon-name="utility:image" alternative-text="Utility image" title="Image"></lightning-icon>
+        <h1>Custom Icons are:</h1>
+        <lightning-icon icon-name="custom:custom11" ></lightning-icon>
+        <lightning-icon icon-name="custom:custom33" title="custom33"></lightning-icon>
+        <lightning-icon icon-name="custom:custom51" title="custom51"></lightning-icon>
+    </lightning-card>
+    <lightning-card  title="Utility Icons with different sizes">
+        <h4>Utility icons with inverse variant in different sizes</h4>
+        <lightning-icon icon-name="utility:connected_apps" alternative-text="Connected" size="large" title="large size">
+        </lightning-icon>
+        <lightning-icon icon-name="utility:connected_apps" alternative-text="Connected" size="medium" title="medium">
+        </lightning-icon>
+        <lightning-icon icon-name="utility:connected_apps" alternative-text="Connected" size="small" title="small">
+        </lightning-icon>
+        <lightning-icon icon-name="utility:connected_apps" alternative-text="Connected" size="x-small" title="x-small">
+        </lightning-icon>
+    </lightning-card>
+
+</template>

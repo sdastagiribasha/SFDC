@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+
+        <template if:true={data}>
+            <template for:each={data} for:item="c">
+                <p key={c.Id}>{c.Name}</p>
+            </template>
+            <template if:true={error}>
+                {error}
+            </template>
+        </template>
+    </lightning-card>
+</template>
