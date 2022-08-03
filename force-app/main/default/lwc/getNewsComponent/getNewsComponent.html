@@ -1,0 +1,19 @@
+<template>
+    <div class="container">
+        <div class="slds-grid slds-gutters slds-wrap">
+                <template for:each={result} for:item="item">
+                    <div class="slds-box slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 " key={item.id}>
+                        <img class="card-image" src={item.urlToImage}/>
+                    </div>
+                     <div class="backgroundfont slds-box slds-m-bottom_small slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_9-of-12" key={item.id}>
+                       <b>Author:</b><lightning-formatted-text value={item.author}></lightning-formatted-text><br/>
+                       <h2><b>Title:</b><lightning-formatted-text value={item.title}></lightning-formatted-text></h2>
+                       <b>Content:</b><lightning-formatted-text value={item.content}></lightning-formatted-text><br/>
+                       <b>URL:</b><lightning-formatted-url value={item.url}></lightning-formatted-url><br/>
+                       <b>urlToImage</b><lightning-formatted-url value={item.urlToImage}></lightning-formatted-url>
+                       <!-- <div class="card-stats" onclick={showModal} data-item={item.id}>Read More</div> -->
+                    </div>
+                </template>   
+        </div>
+    </div>
+</template>

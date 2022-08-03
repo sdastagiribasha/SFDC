@@ -1,0 +1,13 @@
+<template>
+    <!-- <lightning-button label="AccountRecords" onclick={handleClick}></lightning-button> -->
+    <lightning-card title="Named Credential with OAuth 2.0">
+        <template if:true={data}>
+            <template for:each={data} for:item="a">
+                <p key={id}>{a.Name}</p>
+            </template>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+</template>
