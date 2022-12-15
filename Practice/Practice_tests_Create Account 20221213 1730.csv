@@ -1,0 +1,4 @@
+started, ended, path, name, successful, skipped, failed
+2022-12-13 17:30:58.355,2022-12-13 17:43:00.858,C:\Users\Accelirate\Downloads\Accelirate\Provar\Workspace1\Practice,,1,0,0
+2022-12-13 17:30:58.355,2022-12-13 17:42:20.499,C:\Users\Accelirate\Downloads\Accelirate\Provar\Workspace1\Practice\tests,,1,0,0
+2022-12-13 17:30:58.355,2022-12-13 17:42:20.499,C:\Users\Accelirate\Downloads\Accelirate\Provar\Workspace1\Practice\tests,Create Account.testcase,1,0,0
